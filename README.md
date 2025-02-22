@@ -1,50 +1,103 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Juego de Memoria en React
 
-Currently, two official plugins are available:
+Este es un juego de memoria desarrollado con React. El objetivo es encontrar todas las parejas de cartas ocultas. Para ello, el jugador debe voltear dos cartas en cada turno. Si las cartas son iguales, permanecerán visibles; de lo contrario, se voltearán nuevamente después de un breve tiempo. El juego continúa hasta que todas las cartas hayan sido emparejadas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologías utilizadas
 
-## Expanding the ESLint configuration
+React
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Vite (opcional, si usaste Vite para iniciar el proyecto)
 
-- Configure the top-level `parserOptions` property like this:
+CSS (o Tailwind, si lo usaste para los estilos)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Características
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Tablero con un conjunto de cartas dispuestas aleatoriamente.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Interacción fluida con animaciones al voltear las cartas.
+
+Sistema de comparación automática para detectar coincidencias.
+
+Contador de intentos para medir el rendimiento del jugador.
+
+Opción de reiniciar la partida en cualquier momento.
+
+
+Instalación y ejecución
+
+1. Clona este repositorio:
+
+git clone https://github.com/tu-usuario/nombre-del-repo.git
+
+
+2. Accede al directorio del proyecto:
+
+cd nombre-del-repo
+
+
+3. Instala las dependencias:
+
+npm install
+
+
+4. Inicia el servidor de desarrollo:
+
+npm run dev
+
+
+
+Uso
+
+1. Selecciona dos cartas haciendo clic sobre ellas.
+
+
+2. Si ambas cartas son iguales, quedarán destapadas permanentemente.
+
+
+3. Si son diferentes, se ocultarán nuevamente después de un breve lapso.
+
+
+4. Continúa jugando hasta descubrir todas las parejas.
+
+
+5. Si deseas volver a empezar, puedes reiniciar el juego.
+
+
+
+Contribución
+
+Si deseas contribuir, sigue estos pasos:
+
+1. Realiza un fork del repositorio.
+
+
+2. Crea una rama con tu nueva funcionalidad:
+
+git checkout -b nueva-funcionalidad
+
+
+3. Realiza los cambios y haz un commit:
+
+git commit -m "Agregada nueva funcionalidad"
+
+
+4. Sube los cambios a tu fork:
+
+git push origin nueva-funcionalidad
+
+
+5. Crea un pull request en este repositorio.
+
+
+
+Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes ver más detalles en el archivo LICENSE.
+
+
+---
+
+¡Desafía tu memoria y diviértete encontrando todas las parejas! 🎉
+
