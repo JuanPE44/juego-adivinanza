@@ -9,7 +9,16 @@ export function Board() {
   const [board, setBoard] = useState(BOARD_4X4);
   const [moves, setMoves] = useState<number[]>([]);
 
+  const handleTurn = () => {
+    console.log("dos movimientos");
+  };
+
   useEffect(() => {
+    if (moves.length === 16) alert("You win");
+
+    if (moves.length % 2 === 0) {
+      handleTurn();
+    }
     console.log(moves);
   }, [moves]);
   const handleClick = (id: number) => {
